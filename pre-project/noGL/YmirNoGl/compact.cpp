@@ -1,6 +1,6 @@
 #include "compact.h"
 #include "lattice.h"
-#include "../Tools/zaprandom.h"
+#include "../ToolsNoGl/zaprandom.h"
 #include "plot3d.h"
 #include <vector>
 #include <string>

@@ -9,7 +9,7 @@
 #include <set>
 #include <map>
 #include <cstring> // strcpy
-#include "../Tools/zaprandom.h"
+#include "../ToolsNoGl/zaprandom.h"
 using namespace std;
 
 #include "proteins.h"
