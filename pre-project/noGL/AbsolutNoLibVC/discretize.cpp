@@ -2,8 +2,8 @@
 #include <fstream>
 #include "../YmirNoGl/plot3d.h"
 #include "../YmirNoGl/lattice.h"
-#include "../latFit/biu/Point.hh"
-#include "../latFit/latFit.h"
+#include "../latFitNoGl/biu/Point.hh"
+#include "../latFitNoGl/latFit.h"
 #include "../YmirNoGl/lattice.h"
 #include "topology.h"
 #include <sstream>

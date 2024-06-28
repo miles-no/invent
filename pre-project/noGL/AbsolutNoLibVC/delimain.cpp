@@ -350,40 +350,40 @@ void infoOneAntigen(string ID_antigen){
 
 // discretize_delete_insertions. Two cases: no insertion,
 void discretize1(string PDB_ID, string chains){
-#ifndef NO_LIBS
-    string createdPDB = prepareChainsIntoOneFile(PDB_ID, chains, true);
-    cout << "The PDB with selected chains and removed insertions was stored in (empty if failed):" << createdPDB << endl;
-#else
+//#ifndef NO_LIBS
+//    string createdPDB = prepareChainsIntoOneFile(PDB_ID, chains, true);
+//    cout << "The PDB with selected chains and removed insertions was stored in (empty if failed):" << createdPDB << endl;
+//#else
     cerr << "AbsolutNoLib doesn't allow using latfit and GSL, so no discretization possible. Compile the full Absolut with all libraries (including the GUI), then use step-by-step discretization in command line, it will not use the GUI." << endl;
-#endif
+//#endif
 }
 
 // calls latfit
 // output file: niceName << PDB_ID << "_" << chains << "discretized" << typeDiscrete << resolution << ".pdb";
 void discretize2(string PDB_ID, string chains, string inputPDBfile = "", double resolution = 5.25, string typeDiscretization = "FuC", string boolAllowJumps = "true", int numberStructuresInParallel=20){
-    #ifndef NO_LIBS
-    discretization a(PDB_ID, chains, resolution, typeDiscretization);
-    if(inputPDBfile.size() == 0){
-        inputPDBfile = a.preparePDB(); // this does the discretize1 step
-    }
-    bool allow_jumps = (boolAllowJumps.compare("false") && boolAllowJumps.compare("False") && boolAllowJumps.compare("FALSE"));
+    //#ifndef NO_LIBS
+    //discretization a(PDB_ID, chains, resolution, typeDiscretization);
+    //if(inputPDBfile.size() == 0){
+    //    inputPDBfile = a.preparePDB(); // this does the discretize1 step
+    //}
+    //bool allow_jumps = (boolAllowJumps.compare("false") && boolAllowJumps.compare("False") && boolAllowJumps.compare("FALSE"));
 
-    string createdLatfitPDB = a.discretizeIntoFile(inputPDBfile, allow_jumps, numberStructuresInParallel, true);
-    cout << "The discretized PDB file from latfit was stored in (empty if failed):" << createdLatfitPDB << endl;
-    #else
+    //string createdLatfitPDB = a.discretizeIntoFile(inputPDBfile, allow_jumps, numberStructuresInParallel, true);
+    //cout << "The discretized PDB file from latfit was stored in (empty if failed):" << createdLatfitPDB << endl;
+    //#else
     cerr << "AbsolutNoLib doesn't allow using latfit and GSL, so no discretization possible. Compile the full Absolut with all libraries (including the GUI), then use step-by-step discretization in command line, it will not use the GUI." << endl;
-    #endif
+    //#endif
 }
 
 void discretize3(string PDB_ID, string chains, string PDBdiscretizedFromLatfit){
-    #ifndef NO_LIBS
-    discretization a(PDB_ID, chains, 5.25, "FuC"); // 5.25 and FuC will not be used
-    // note, it is going to reread the original PDB_ID.pdb for finding glycans
-    string inLatticeCreatedFile = a.transformDiscretizedFileToLattice(PDBdiscretizedFromLatfit);
-    cout << "The lattice version of the discretized PDB was saved in:" << inLatticeCreatedFile << endl;
-    #else
+    //#ifndef NO_LIBS
+    //discretization a(PDB_ID, chains, 5.25, "FuC"); // 5.25 and FuC will not be used
+    //// note, it is going to reread the original PDB_ID.pdb for finding glycans
+    //string inLatticeCreatedFile = a.transformDiscretizedFileToLattice(PDBdiscretizedFromLatfit);
+    //cout << "The lattice version of the discretized PDB was saved in:" << inLatticeCreatedFile << endl;
+    //#else
     cerr << "AbsolutNoLib doesn't allow using latfit and GSL, so no discretization possible. Compile the full Absolut with all libraries (including the GUI), then use step-by-step discretization in command line, it will not use the GUI." << endl;
-    #endif
+    //#endif
 }
 
 
@@ -764,18 +764,18 @@ MPI_Finalize();
 //int option1(string PDB_ID = "", string chains = "", double resolution = 5.25, string typeDiscrete = "FuC"){
 int option1(string PDB_ID, string chains, double resolution, string typeDiscrete){
 
-    #ifndef NOQT
-    char* argv[] = {(char*) "Nothing!"};
-    int argc = 1;
-    QApplication appl(argc, argv);
-    bool pipeline = false; // this option would trigger an automatic comparison/iteration of lots of lattice resolutions
-    PDB* a2 = new PDB(PDB_ID, chains, pipeline, resolution, typeDiscrete);
-    // use example: PDB* a2 = new PDB("1CZ8", "VW");
-    a2->show();
-    appl.exec();
-    #else
+    //#ifndef NOQT
+    //char* argv[] = {(char*) "Nothing!"};
+    //int argc = 1;
+    //QApplication appl(argc, argv);
+    //bool pipeline = false; // this option would trigger an automatic comparison/iteration of lots of lattice resolutions
+    //PDB* a2 = new PDB(PDB_ID, chains, pipeline, resolution, typeDiscrete);
+    //// use example: PDB* a2 = new PDB("1CZ8", "VW");
+    //a2->show();
+    //appl.exec();
+    //#else
     cerr << "You are intending to run the graphical interface of Absolut. Please make sure to use the Absolut version with libraries, and that NOQT / NO_LIBS are not defined.\n Of note, it is still possible to discretize by command line, the GUI will pop-up but the job is already done when it pops up." << endl;
-    #endif
+    //#endif
     return 0;
 }
 
@@ -1635,45 +1635,45 @@ vector<vector<double> >* optionPre7(string ID_antigen){ //, string originalPDBon
     cout << "Chains are " << cutName[1] << endl;
 
     // First, needs to rediscretize the original antigen to get the good coordinates,
-#ifndef NOQT
-    char* argv[] = {(char*) "Nothing!"};
-    int argc = 1;
-    QApplication appl(argc, argv);
-    PDB* a2 = new PDB(cutName[0], cutName[1], false, 5.25, "FuC");
-
-    // some antigens need nKeep=40
-    if((!ID_antigen.compare("3WD5_A")) || (!ID_antigen.compare("4PP1_A")) || (!ID_antigen.compare("5JW4_A"))){
-        a2->setnKeep(50);
-    }
-    a2->show();
-
-
-    cerr << "First step OK" << endl;
-    // note: this function will make sure that the PDB is downloaded or available in the running folder.
-
-    string discretizedPDB = a2->getDiscretizedFileName();
-    cout << "Discretized latfit output is in " << discretizedPDB << endl;
-    //superProtein* discr = a2->inLattice;
-
-    // test 2:
-    // read a PDB from latfit, then read the same PDB but with another chain, include it in visualization
-    latFitToLattice a = latFitToLattice();
-    a.parseLatFitPDB(discretizedPDB);
-    a.transform();
-    superProtein* P3 = a.asSuperProtein();
-
-    antigenInfo AI = getAntigenInfos(ID_antigen);
-    string antibodyChains = AI.antibodyChains;
-    cout << "The chains of binding antibodies in the original PDB are: " << antibodyChains << endl;
-
-    vector<vector<double> > positionsAB = getPDBChainCoarseGrainedPositions(cutName[0] + ".pdb", antibodyChains, "FuC");
-    vector<vector<double> >* transformed = new vector<vector<double> >(pooledPDBtoLattice(positionsAB, a.initXAxis, a.initYAxis, a.listPositions[0]));
-
-
-    return transformed;
-#else
+//#ifndef NOQT
+//    char* argv[] = {(char*) "Nothing!"};
+//    int argc = 1;
+//    QApplication appl(argc, argv);
+//    PDB* a2 = new PDB(cutName[0], cutName[1], false, 5.25, "FuC");
+//
+//    // some antigens need nKeep=40
+//    if((!ID_antigen.compare("3WD5_A")) || (!ID_antigen.compare("4PP1_A")) || (!ID_antigen.compare("5JW4_A"))){
+//        a2->setnKeep(50);
+//    }
+//    a2->show();
+//
+//
+//    cerr << "First step OK" << endl;
+//    // note: this function will make sure that the PDB is downloaded or available in the running folder.
+//
+//    string discretizedPDB = a2->getDiscretizedFileName();
+//    cout << "Discretized latfit output is in " << discretizedPDB << endl;
+//    //superProtein* discr = a2->inLattice;
+//
+//    // test 2:
+//    // read a PDB from latfit, then read the same PDB but with another chain, include it in visualization
+//    latFitToLattice a = latFitToLattice();
+//    a.parseLatFitPDB(discretizedPDB);
+//    a.transform();
+//    superProtein* P3 = a.asSuperProtein();
+//
+//    antigenInfo AI = getAntigenInfos(ID_antigen);
+//    string antibodyChains = AI.antibodyChains;
+//    cout << "The chains of binding antibodies in the original PDB are: " << antibodyChains << endl;
+//
+//    vector<vector<double> > positionsAB = getPDBChainCoarseGrainedPositions(cutName[0] + ".pdb", antibodyChains, "FuC");
+//    vector<vector<double> >* transformed = new vector<vector<double> >(pooledPDBtoLattice(positionsAB, a.initXAxis, a.initYAxis, a.listPositions[0]));
+//
+//
+//    return transformed;
+//#else
     return nullptr;
-#endif
+//#endif
 
 //#ifdef ALLOW_GRAPHICS
 //    glDisplay(); // this clears everything,

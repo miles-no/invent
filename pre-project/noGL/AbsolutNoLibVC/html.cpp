@@ -25,7 +25,7 @@
 //#include <QApplication>
 //#endif
 
-#include "plot3d.h"
+#include "../YmirNoGl/plot3d.h"
 
 #include <iostream>
 using namespace std;
@@ -129,111 +129,111 @@ string html::analyze(string outputFolder, string folderWithBindings, string fold
 
     // 2b - re-discretizes the antigen and checks it returns the same positions,
     //      the forbidden positions should be included in the library antigen, where new forbidden positions might have been added manually.
-    #ifndef NOQT
-    // Step 1 - check that discretization is OK if would do it again.
-    char* argv[] = {(char*) "a"};
-    int motherFargc = 1;
-    QApplication appl(motherFargc, argv);
-    PDB* a2 = new PDB(PDBname, chains, false, 5.25, "FuC");
+    //#ifndef NOQT
+    //// Step 1 - check that discretization is OK if would do it again.
+    //char* argv[] = {(char*) "a"};
+    //int motherFargc = 1;
+    //QApplication appl(motherFargc, argv);
+    //PDB* a2 = new PDB(PDBname, chains, false, 5.25, "FuC");
 
-    superProtein* discr = a2->inLattice;
-    set<int> holes = listEmbarrasingPoints(discr);
-    vector<std::pair< int, string> > subChDiscr = getSubChains(discr);
-    //vector<int> discrStartPos = startingPositions(discr);
-    string AAs = discr->getAAseq();
-    string structure = discr->structure->sequence;
-
-
-    if(AAs.compare(originalAAseq)) {
-        cerr << "ERR: the rediscretized antigen AA sequence is different: Registered in library is: \n"
-                                        << originalAAseq << " while rediscretized is \n" << AAs << endl;
-        return string("");
-    }
-    if(structure.compare(originalStructure)) {
-        cerr << "ERR: the rediscretized antigen structure is different: Registered in library is: \n"
-                                        << originalStructure << " while rediscretized is \n" << structure << endl;
-        return string("");
-    }
-
-    if(subCh.size() != subChDiscr.size()) {
-        cerr << "ERR: the rediscretized antigen structure has different number of chains" << endl;
-        return string("");
-    }
-
-    htmlout << "<h1>" << AGname << "</h1>\n";
+    //superProtein* discr = a2->inLattice;
+    //set<int> holes = listEmbarrasingPoints(discr);
+    //vector<std::pair< int, string> > subChDiscr = getSubChains(discr);
+    ////vector<int> discrStartPos = startingPositions(discr);
+    //string AAs = discr->getAAseq();
+    //string structure = discr->structure->sequence;
 
 
-    a2->viewDiscretized(false);
-    savePicture(outputFolder + AGname + string(".bmp"));
+    //if(AAs.compare(originalAAseq)) {
+    //    cerr << "ERR: the rediscretized antigen AA sequence is different: Registered in library is: \n"
+    //                                    << originalAAseq << " while rediscretized is \n" << AAs << endl;
+    //    return string("");
+    //}
+    //if(structure.compare(originalStructure)) {
+    //    cerr << "ERR: the rediscretized antigen structure is different: Registered in library is: \n"
+    //                                    << originalStructure << " while rediscretized is \n" << structure << endl;
+    //    return string("");
+    //}
 
-    htmlout << "<img src=\"" << AGname + string(".bmp") << "\" alt=\"AntigenPicture\" class=\"center\" style=\"filter:FlipH.\">\n";
+    //if(subCh.size() != subChDiscr.size()) {
+    //    cerr << "ERR: the rediscretized antigen structure has different number of chains" << endl;
+    //    return string("");
+    //}
 
-    htmlout << "<h3>" << subChDiscr.size() << " Subchain(s): </h3>" << endl;
-    htmlout << "<p>\n";
-    for(size_t i = 0; i < subChDiscr.size(); ++i){
-        if((subChDiscr[i].first) != (subCh[i].first)) {
-            cerr << "ERR: Different starting positions between chains" << endl;
-            return string("");
-        }
-        if(subChDiscr[i].second.compare(subCh[i].second)){
-            cerr << "ERR: Different substructures between chains" << endl;
-            return string("");
-        }
-        htmlout << subChDiscr[i].first << "\t" << subChDiscr[i].second << endl;
-    }
-    htmlout << AAs << "\n";
-    htmlout << "</p>\n";
-
-    // finding positions that were added,
+    //htmlout << "<h1>" << AGname << "</h1>\n";
 
 
-    std::vector<int> common_points;
-    set_intersection(AGholes.begin(),AGholes.end(),holes.begin(),holes.end(), std::back_inserter(common_points));
-    if(common_points.size() != holes.size()){
-        cerr << "ERR: the auto discretize has some positions that the library AG does not have" << endl;
-    }
-    cout << " ----------- Quality control passed successfully!  ----------- " << endl;
+    //a2->viewDiscretized(false);
+    //savePicture(outputFolder + AGname + string(".bmp"));
+
+    //htmlout << "<img src=\"" << AGname + string(".bmp") << "\" alt=\"AntigenPicture\" class=\"center\" style=\"filter:FlipH.\">\n";
+
+    //htmlout << "<h3>" << subChDiscr.size() << " Subchain(s): </h3>" << endl;
+    //htmlout << "<p>\n";
+    //for(size_t i = 0; i < subChDiscr.size(); ++i){
+    //    if((subChDiscr[i].first) != (subCh[i].first)) {
+    //        cerr << "ERR: Different starting positions between chains" << endl;
+    //        return string("");
+    //    }
+    //    if(subChDiscr[i].second.compare(subCh[i].second)){
+    //        cerr << "ERR: Different substructures between chains" << endl;
+    //        return string("");
+    //    }
+    //    htmlout << subChDiscr[i].first << "\t" << subChDiscr[i].second << endl;
+    //}
+    //htmlout << AAs << "\n";
+    //htmlout << "</p>\n";
+
+    //// finding positions that were added,
 
 
-    htmlout << "<h3>Automatically identified aberrant positions, that will be be blocked:</h3>\n";
-    htmlout << "<p>\n";
-    for(size_t i = 0; i < common_points.size(); ++i){
-         htmlout << common_points[i];
-         if(i < common_points.size() - 1) htmlout << ", "; //"\t" << printVector(lattice::positionFromID(common_points[i])) << "\n";
-    }
-    htmlout << "\n";
-    htmlout << "</p>\n";
-
-    // these are the points that are added manyally
-    std::vector<int> pointsOnlyInOne;
-    set_symmetric_difference(AGholes.begin(),AGholes.end(),holes.begin(),holes.end(), std::back_inserter(pointsOnlyInOne));
-    if(pointsOnlyInOne.size() > 0){
-        htmlout << "<h3>Manually filled positions:</h3>\n";
-        htmlout << "<p>\n";
-        for(size_t i = 0; i < pointsOnlyInOne.size(); ++i){
-             htmlout << pointsOnlyInOne[i]; // << "\t" << printVector(lattice::positionFromID(pointsOnlyInOne[i])) << "\n";
-            if(i < pointsOnlyInOne.size() - 1) htmlout << ", ";
-        }
-        htmlout << "</p>\n";
-        htmlout << "\n";
-    }
+    //std::vector<int> common_points;
+    //set_intersection(AGholes.begin(),AGholes.end(),holes.begin(),holes.end(), std::back_inserter(common_points));
+    //if(common_points.size() != holes.size()){
+    //    cerr << "ERR: the auto discretize has some positions that the library AG does not have" << endl;
+    //}
+    //cout << " ----------- Quality control passed successfully!  ----------- " << endl;
 
 
-    // 2c - Generates data for different modes of discretization
-    ofstream latticeResolutions(outputFolder + AGname + "discretizations.txt", ios::out);
-    latticeResolutions << a2->iterateBonds("FuC", true); // the true/false tells to add a header
-    latticeResolutions << a2->iterateBonds("CoM", false);
-    latticeResolutions << a2->iterateBonds("CA", false);
-    latticeResolutions.close();
+    //htmlout << "<h3>Automatically identified aberrant positions, that will be be blocked:</h3>\n";
+    //htmlout << "<p>\n";
+    //for(size_t i = 0; i < common_points.size(); ++i){
+    //     htmlout << common_points[i];
+    //     if(i < common_points.size() - 1) htmlout << ", "; //"\t" << printVector(lattice::positionFromID(common_points[i])) << "\n";
+    //}
+    //htmlout << "\n";
+    //htmlout << "</p>\n";
 
-    // there should be a R script that later generates discretizations.png
-    htmlout << "<p>\n";
-    htmlout << "<a href=\"" << AGname << "discretizations.txt\">\n";
-    htmlout << " <img src=\"" << AGname << "discretizations.png\" alt=\"Discretization quality for different lattice resolutions, for antigen " << AGname << "\" style=\"width:500px;height:600px;\"> \n";
-    htmlout << "</a>\n";
-    htmlout << "</p>\n";
+    //// these are the points that are added manyally
+    //std::vector<int> pointsOnlyInOne;
+    //set_symmetric_difference(AGholes.begin(),AGholes.end(),holes.begin(),holes.end(), std::back_inserter(pointsOnlyInOne));
+    //if(pointsOnlyInOne.size() > 0){
+    //    htmlout << "<h3>Manually filled positions:</h3>\n";
+    //    htmlout << "<p>\n";
+    //    for(size_t i = 0; i < pointsOnlyInOne.size(); ++i){
+    //         htmlout << pointsOnlyInOne[i]; // << "\t" << printVector(lattice::positionFromID(pointsOnlyInOne[i])) << "\n";
+    //        if(i < pointsOnlyInOne.size() - 1) htmlout << ", ";
+    //    }
+    //    htmlout << "</p>\n";
+    //    htmlout << "\n";
+    //}
 
-    #endif
+
+    //// 2c - Generates data for different modes of discretization
+    //ofstream latticeResolutions(outputFolder + AGname + "discretizations.txt", ios::out);
+    //latticeResolutions << a2->iterateBonds("FuC", true); // the true/false tells to add a header
+    //latticeResolutions << a2->iterateBonds("CoM", false);
+    //latticeResolutions << a2->iterateBonds("CA", false);
+    //latticeResolutions.close();
+
+    //// there should be a R script that later generates discretizations.png
+    //htmlout << "<p>\n";
+    //htmlout << "<a href=\"" << AGname << "discretizations.txt\">\n";
+    //htmlout << " <img src=\"" << AGname << "discretizations.png\" alt=\"Discretization quality for different lattice resolutions, for antigen " << AGname << "\" style=\"width:500px;height:600px;\"> \n";
+    //htmlout << "</a>\n";
+    //htmlout << "</p>\n";
+
+    //#endif
 
     // 2d - Now liks to available files in folderWithBindings and shows some statistics,
 
@@ -272,12 +272,12 @@ string html::analyze(string outputFolder, string folderWithBindings, string fold
 
     for(std::map<string, int>::iterator it = list.begin(); it != list.end(); ++it){
         cout << it->first << "\t" << it->second << endl;
-        #ifndef NOQT
-        std::pair<string, int> str = retrieveStructureFromID(it->first);
-        struct3D* representativeStructClass = new struct3D(str.first, UnDefined, str.second);
-        //cout << "\t" << representativeStructClass->occupiedPositions.size() << "\t" <<
-        addToDisplay(representativeStructClass, false);
-        #endif
+        //#ifndef NOQT
+        //std::pair<string, int> str = retrieveStructureFromID(it->first);
+        //struct3D* representativeStructClass = new struct3D(str.first, UnDefined, str.second);
+        ////cout << "\t" << representativeStructClass->occupiedPositions.size() << "\t" <<
+        //addToDisplay(representativeStructClass, false);
+        //#endif
     }
 
     //#ifndef NOQT
