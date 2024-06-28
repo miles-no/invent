@@ -1,0 +1,5 @@
+*.vsidx
+/pre-project/noGL/AbsolutNoLibVC/.vs
+/pre-project/noGL/AbsolutNoLibVC/x64
+*.filters
+*.user
