@@ -35,7 +35,7 @@
 #include <string>
 #include <type_traits>      // to compare types for printHeaders
 
-#include "ymir.h"           // for printVector
+#include "../YmirNoGl/ymir.h"           // for printVector
 #include "motifFeatures.h"
 using namespace std;
 

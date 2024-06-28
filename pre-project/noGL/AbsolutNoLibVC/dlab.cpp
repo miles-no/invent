@@ -5,13 +5,13 @@ dlab::dlab()
 
 }
 
-#include "../Ymir/ymir.h"
-#include "../Tools/md5.h"
+#include "../YmirNoGl/ymir.h"
+#include "../ToolsNoGl/md5.h"
 #include "motifFeatures.h"
 #include "quality.h"
 #include "selfEvo.h"
-#include "../Tools/zaprandom.h"
-#include "../Tools/dirent.h"
+#include "../ToolsNoGl/zaprandom.h"
+#include "../ToolsNoGl/dirent.h"
 #include "antigenLib.h"
 #include "importrepertoire.h"
 #include "poolstructs.h"

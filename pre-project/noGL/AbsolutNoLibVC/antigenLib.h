@@ -3,9 +3,9 @@
 
 #include <string>
 #include <vector>
-#include "../Ymir/ymir.h"
-#include "../Tools/distribution.h"
-#include "../Tools/zaprandom.h"
+#include "../YmirNoGl/ymir.h"
+#include "../ToolsNoGl/distribution.h"
+#include "../ToolsNoGl/zaprandom.h"
 
 void showListIDs();
 std::vector<std::string> listIDs();

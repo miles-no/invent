@@ -1,7 +1,7 @@
 #include "motifFeatures.h"
-#include "../Ymir/ymir.h"
-#include "../Ymir/plot3d.h"
-#include "../Ymir/proteins.h"
+#include "../YmirNoGl/ymir.h"
+#include "../YmirNoGl/plot3d.h"
+#include "../YmirNoGl/proteins.h"
 #include "fileformats.h"
 #include "poolstructs.h"
 #include <string>
@@ -11,7 +11,7 @@
 #include <cmath>
 #include <regex>
 #include "antigenLib.h" // for testing only
-#include "../Tools/dirent.h"
+#include "../ToolsNoGl/dirent.h"
 using namespace std;
 
 vector<string> split(const string& str, const string& delim)

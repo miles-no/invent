@@ -1,7 +1,7 @@
 #ifndef Motif_FEATURES_H
 #define Motif_FEATURES_H
 
-#include "../Ymir/ymir.h"
+#include "../YmirNoGl/ymir.h"
 #include "importrepertoire.h"
 
 vector<string> split(const string& str, const string& delim);

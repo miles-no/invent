@@ -8,7 +8,7 @@
 #include <iostream>
 #include <vector>
 #include "fileformats.h"
-#include "../Ymir/compact.h" // to get print(set)
+#include "../YmirNoGl/compact.h" // to get print(set)
 using namespace std;
 
 void testGenerateSubsets();

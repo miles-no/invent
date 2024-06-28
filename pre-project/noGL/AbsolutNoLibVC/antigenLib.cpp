@@ -1,5 +1,5 @@
 #include "antigenLib.h"
-#include "../Ymir/proteins.h"
+#include "../YmirNoGl/proteins.h"
 using namespace std;
 
 

@@ -1,7 +1,7 @@
 #ifndef POOLSTRUCTS_H
 #define POOLSTRUCTS_H
 
-#include "ymir.h"
+#include "../YmirNoGl/ymir.h"
 #include <set>
 #include <string>
 #include <utility>

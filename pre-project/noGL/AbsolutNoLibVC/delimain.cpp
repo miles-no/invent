@@ -15,13 +15,13 @@
 // Note, even without MPI, Absolut can be used multi-thread up to 50 threads. The MPI version is more intended for High Performance Computing architectures.
 // See common.h for more options on including / excluding libraries
 
-#include "../Ymir/ymir.h"
-#include "../Tools/md5.h"
+#include "../YmirNoGl/ymir.h"
+#include "../ToolsNoGl/md5.h"
 #include "motifFeatures.h"
 #include "quality.h"
 #include "selfEvo.h"
-#include "../Tools/zaprandom.h"
-#include "../Tools/dirent.h"
+#include "../ToolsNoGl/zaprandom.h"
+#include "../ToolsNoGl/dirent.h"
 #include <regex>
 #include "antigenLib.h"
 #include "importrepertoire.h"
@@ -65,10 +65,10 @@
 
 using namespace std;
 
-#ifndef NOQT
-#include <QApplication>
-#include "pdb.h"
-#endif
+//#ifndef NOQT
+//#include <QApplication>
+//#include "pdb.h"
+//#endif
 
 #ifdef USE_MPI
 #include "mpi.h"
@@ -80,7 +80,7 @@ using namespace std;
 #endif
 
 //#include "pthread.h"
-#include "../../../pthread-win32/pthread.h"
+#include "../pthread-win32/pthread.h"
 
 static pthread_mutex_t lockSaveCommonDataset =  PTHREAD_MUTEX_INITIALIZER;
 
@@ -1692,10 +1692,10 @@ vector<vector<double> >* optionPre7(string ID_antigen){ //, string originalPDBon
 void option7(string ID_antigen, bool generateHotspots, string bindingDatasetFile, double maxE, int sizeK, int degree){
     bool includeAntibodyFromPDB = defaultIncludePDBantibody;
 
-    #ifndef NOQT
-    setPictureFileNamePrefix(string("Hot") + ID_antigen);
-    glDisplay(); // init glut
-    #endif
+    //#ifndef NOQT
+    //setPictureFileNamePrefix(string("Hot") + ID_antigen);
+    //glDisplay(); // init glut
+    //#endif
 
     vector<vector<double> >* transformed = nullptr;
     #ifndef NOQT

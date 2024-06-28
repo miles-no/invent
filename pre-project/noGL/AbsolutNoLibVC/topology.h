@@ -1,7 +1,7 @@
 #ifndef TOPOLOGY_H
 #define TOPOLOGY_H
 
-#include "ymir.h"
+#include "../YmirNoGl/ymir.h"
 
 set<int> getAtmosphere(int onePos, set<int>& totOccupPos, set<int>& alreadyTaken);
 set<int> getAtmosphere(superProtein* S);

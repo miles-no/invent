@@ -1,5 +1,5 @@
 #include "poolstructs.h"
-#include "ymir.h"
+#include "../YmirNoGl/ymir.h"
 #include <string>
 #include <vector>
 #include <sstream>

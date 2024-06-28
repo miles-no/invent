@@ -1,11 +1,11 @@
 #include "selfEvo.h"
-#include "../Ymir/ymir.h"
-#include "../Tools/nucleotides.h"
-#include "../Tools/zaprandom.h"
+#include "../YmirNoGl/ymir.h"
+#include "../ToolsNoGl/nucleotides.h"
+#include "../ToolsNoGl/zaprandom.h"
 #include "motifFeatures.h"
 #include "antigenLib.h"
-#include "../Ymir/proteins.h"
-#include "../Ymir/plot3d.h"
+#include "../YmirNoGl/proteins.h"
+#include "../YmirNoGl/plot3d.h"
 
 // checks if a position is surrounded by least 4 positions around it in the same plane (donut)
 bool isDonut(int position, set<int>& occupiedPositions){

@@ -5,7 +5,7 @@
 #include <sstream>
 #include <fstream>
 #include "antigenLib.h"
-#include "../Tools/stopwatch.h"
+#include "../ToolsNoGl/stopwatch.h"
 using namespace std;
 
 void testQuality(){

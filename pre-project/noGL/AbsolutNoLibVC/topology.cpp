@@ -1,6 +1,6 @@
 #include "topology.h"
-#include "../Ymir/ymir.h"
-#include "../Ymir/plot3d.h"
+#include "../YmirNoGl/ymir.h"
+#include "../YmirNoGl/plot3d.h"
 #include "fileformats.h"
 #include <string>
 #include <sstream>

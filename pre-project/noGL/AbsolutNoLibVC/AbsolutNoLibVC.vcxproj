@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="antigenLib.h" />
+    <ClInclude Include="discretize.h" />
     <ClInclude Include="dlab.h" />
     <ClInclude Include="epitope.h" />
     <ClInclude Include="fileformats.h" />
@@ -142,6 +143,7 @@
   <ItemGroup>
     <ClCompile Include="antigenLib.cpp" />
     <ClCompile Include="delimain.cpp" />
+    <ClCompile Include="discretize.cpp" />
     <ClCompile Include="dlab.cpp" />
     <ClCompile Include="epitope.cpp" />
     <ClCompile Include="fileformats.cpp" />

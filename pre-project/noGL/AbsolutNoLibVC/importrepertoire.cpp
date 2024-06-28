@@ -1,6 +1,6 @@
 #include "importrepertoire.h"
 #include "antigenLib.h"
-#include "../Ymir/ymir.h"
+#include "../YmirNoGl/ymir.h"
 #include <fstream>
 #include <iostream>
 #include <sstream>

@@ -2,9 +2,9 @@
 #include "fileformats.h"
 #include <map>
 #include <algorithm>
-#include "../Ymir/compact.h"
-#include "../Ymir/plot3d.h"
-#include "../Ymir/receptorligand.h"
+#include "../YmirNoGl/compact.h"
+#include "../YmirNoGl/plot3d.h"
+#include "../YmirNoGl/receptorligand.h"
 
 #include "motifFeatures.h"
 #include "poolstructs.h"
