@@ -29,6 +29,7 @@ Binærfiler bygges i dag med en Community versjon av Qt og kan produsere tre sep
   - AbsolutNoLibMPI (kjernefunksjonalitet med MPI,  kommandolinje)
 
 
+
 ## Forkortelser
 
 |#|Forkortelse|Beskrivelse|
@@ -38,5 +39,6 @@ Binærfiler bygges i dag med en Community versjon av Qt og kan produsere tre sep
 
 
 ## Referanser
-Det opprinnelige Absolut prosjektet: https://github.com/csi-greifflab/Absolut
-Qt Community version lisens: https://www.qt.io/download-open-source
+- [Det opprinnelige Absolut prosjektet](https://github.com/csi-greifflab/Absolut)
+- [Qt Community version lisens](https://www.qt.io/download-open-source)
+
