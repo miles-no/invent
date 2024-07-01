@@ -58,12 +58,14 @@ vector3D rotate (vector3D v, double theta, double phi);
 ///       This will help to retrieve these AAs in the latfit generated PDB,
 ///       because AA IDs are shifted in the pipeline => we use the position to retrieve the AAs.
 struct readGlycans {
-    readGlycans(string filename, string chain);
+//    readGlycans(string filename, string chain);
+    int read(string filename, string chain);
     size_t nGlycans;
     vector< vector3D > listPositionGlycans;
     vector< std::pair<char, int> > AAboundByGlycans;
     vector< vector<double> > PositionsAAboundByGlycans; // position of the CA actually,
-    string print();
+//    string print();
+    string print;
 
     // Position of all CAs of the PDB, as side informations of the PDB file in case for later
     std::map<string, vector<double> > positionsAllCAs;

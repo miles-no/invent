@@ -108,6 +108,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ShowProgress>LinkVerbose</ShowProgress>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,7 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="antigenLib.cpp" />
-    <ClCompile Include="delimain.cpp" />
+    <ClCompile Include="AbsolutNoLibVC.cpp" />
     <ClCompile Include="discretize.cpp" />
     <ClCompile Include="dlab.cpp" />
     <ClCompile Include="epitope.cpp" />
@@ -155,7 +156,28 @@
     <ClCompile Include="selfEvo.cpp" />
     <ClCompile Include="topology.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pthread-win32\windows\VS2022\pthread_lib.2022.vcxproj">
+      <Project>{a063dfad-6995-4e1a-afff-e43dc11e95b1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ToolsNoGl\ToolsNoGl.vcxproj">
+      <Project>{8a99417e-7920-47a9-bb23-ef6d12882ad7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\YmirNoGl\YmirNoGl.vcxproj">
+      <Project>{d33e5c3d-7ece-4570-9c51-3f67daf6ed17}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\gsl-msvc14-x64.2.3.0.2779\build\native\gsl-msvc14-x64.targets" Condition="Exists('packages\gsl-msvc14-x64.2.3.0.2779\build\native\gsl-msvc14-x64.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\gsl-msvc14-x64.2.3.0.2779\build\native\gsl-msvc14-x64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gsl-msvc14-x64.2.3.0.2779\build\native\gsl-msvc14-x64.targets'))" />
+  </Target>
 </Project>

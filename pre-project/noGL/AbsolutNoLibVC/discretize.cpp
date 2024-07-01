@@ -1104,8 +1104,9 @@ char identifyAA(string typeResidue){
 
 
 
-readGlycans::readGlycans(string filename, string chainFilter){
-    // Parse lines LINK for glycans will store: Chain+IDAA+AA in a string, and match the found glycan ID
+//readGlycans::readGlycans(string filename, string chainFilter) {
+int readGlycans::read(string filename, string chainFilter) {
+        // Parse lines LINK for glycans will store: Chain+IDAA+AA in a string, and match the found glycan ID
     // example: LINK         ND2 ASN A  88                 C1  NAG A1016     1555   1555  1.44
     //          will become  "A88ASN" => "A1016"
     std::map<string, string> contactsNAG_NAN;
@@ -1122,7 +1123,7 @@ readGlycans::readGlycans(string filename, string chainFilter){
     cout << "Looking for glycans in " << filename << endl;
     f.open(filename.c_str());
     if(!f) {
-        cerr << "ERR: latFitToLattice::parseLatFitPDB, file not found:\n" << filename << endl; return;
+        cerr << "ERR: latFitToLattice::parseLatFitPDB, file not found:\n" << filename << endl; return 0;
     }
     while(f.good()){
         char buf[10001];
