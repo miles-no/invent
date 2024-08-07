@@ -8,14 +8,14 @@ OBJ_DIR = build
 BIN_DIR = bin
 
 # Files
-SRC = $(wildcard $(SRC_DIR)/*.cpp)
-OBJ = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
-EXECUTABLE = $(BIN_DIR)/main
+SRC = $(SRC_DIR)/factorial.cpp $(SRC_DIR)/factorial_tests.cpp $(SRC_DIR)/catch2.cpp
+OBJS = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
+FACTORIAL_TESTS = $(BIN_DIR)/factorial_tests
 
 # Targets
-all: $(EXECUTABLE)
+all: $(FACTORIAL_TESTS)
 
-$(EXECUTABLE): $(OBJ)
+$(FACTORIAL_TESTS): $(OBJS)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
