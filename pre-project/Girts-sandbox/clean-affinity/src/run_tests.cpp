@@ -27,11 +27,11 @@ class LatticeTests : public Cppunit {
 
     void testPosition(int id, int expectedPosX, int expectedPosY, int expectedPosZ, int expectedID) {
         vector<int> pos = lattice::positionFromID(id);
-        CHECKT(pos[0] == expectedPosX);
-        CHECKT(pos[1] == expectedPosY);
-        CHECKT(pos[2] == expectedPosZ);
+        CHECK(pos[0], expectedPosX);
+        CHECK(pos[1], expectedPosY);
+        CHECK(pos[2], expectedPosZ);
         int actualID = lattice::idFromPosisition(pos);
-        CHECKT(actualID == expectedID);
+        CHECK(actualID, expectedID);
     }
 
     void testNeighbors() {

@@ -6,15 +6,24 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(include)
 
 add_executable(run_tests
+        src/proteins.cpp
+        src/compact.cpp
+        src/lattice.cpp
+        src/run_tests.cpp
+        src/fastaffinity.cpp
         include/fastaffinity.hpp
         include/pose.hpp
         include/proteins.hpp
-        src/proteins.cpp
         include/compact.hpp
-        src/compact.cpp
         include/lattice.hpp
-        src/lattice.cpp
         include/residue.hpp
-        src/run_tests.cpp
-        src/fastaffinity.cpp
+)
+
+add_executable(run_catch2_tests
+        src/run_catch2_tests.cpp
+        src/catch2.cpp
+        src/proteins.cpp
+        src/compact.cpp
+        src/lattice.cpp
+        include/catch2.hpp
 )
