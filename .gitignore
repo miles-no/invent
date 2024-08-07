@@ -5,3 +5,11 @@
 *.user
 
 .DS_Store
+
+pre-project/Girts-sandbox/unit-tests/bin/
+
+pre-project/Girts-sandbox/unit-tests/build/
+
+pre-project/Girts-sandbox/unit-tests/src/main
+
+pre-project/Girts-sandbox/unit-tests/src/main.dSYM
