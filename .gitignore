@@ -3,3 +3,5 @@
 /pre-project/noGL/AbsolutNoLibVC/x64
 *.filters
 *.user
+
+.DS_Store
