@@ -1,6 +1,9 @@
 #include "cppunit.hpp"
 #include "factorial.hpp"
 
+/**
+ * Example of a test suite using Cppunit.
+ */
 class FactorialTests: public Cppunit {
     void test_list() {
         CHECK(factorial(1), 1);
