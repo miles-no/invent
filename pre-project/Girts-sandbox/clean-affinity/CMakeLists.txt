@@ -27,3 +27,7 @@ add_executable(run_catch2_tests
         src/lattice.cpp
         include/catch2.hpp
 )
+
+add_executable(profiler_example
+        src/long_main.cpp
+)
