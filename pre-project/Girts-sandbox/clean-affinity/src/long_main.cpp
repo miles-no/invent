@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <numeric>
-#include <thread>
 #include <algorithm>
 
 using namespace std;
@@ -23,7 +22,13 @@ long long sumElements(vector<int> &data) {
 }
 
 void sleep(int seconds) {
-    this_thread::sleep_for(chrono::seconds(seconds));
+    // Busy loop for the specified number of seconds
+    auto startTime = getTime();
+    auto endTime = startTime + chrono::seconds(seconds);
+    auto currentTime = startTime;
+    while (currentTime < endTime) {
+        currentTime = getTime();
+    }
 }
 
 vector<int> allocateData(size_t size) {
@@ -37,14 +42,14 @@ vector<int> allocateData(size_t size) {
  * @return 0 on success, 1 on failure.
  */
 int main() {
-    vector<int> data = allocateData(1000000);
+    vector<int> data = allocateData(10000000);
     fillWithNumbers(data);
 
     auto start = getTime();
 
     sort(data);
     long long sum = sumElements(data);
-    sleep(2);
+    sleep(1);
 
     auto end = getTime();
     chrono::duration<double> elapsed = end - start;
