@@ -1,4 +1,4 @@
-# Clean affinity
+# Unit-test example
 
 A minimalistic project with the attempt to isolate a "small chunk" of Absolut code (regarding the affinity) and write
 simple unit tests for it.
