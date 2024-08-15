@@ -132,7 +132,24 @@ bool lattice::areNeighbors(int pos1, int pos2){
     return false;
 }
 
-//bool lattice::isNeighbor(int pos1, int pos2){
-//    return ((abs(pos1 - pos2) == 1) || (abs(pos1 - pos2) == XWidth) || (abs(pos1 - pos2) == XWidth*YWidth));
-//}
+// This is moved to unit tests, kept just for reference.
+void testLattice(){
+    cout << "Testing the lattice class" << endl;
+    cout << "predefined sizes : " << XWidth << "," << YWidth << "," << ZWidth << endl;
+    vector<int> toTest = {0, 15, 200, 1000, 15000};
+    for(unsigned int i = 0; i < toTest.size(); ++i){
+        cout << "positionFromID\t" << toTest[i] << "->" << printVector(lattice::positionFromID(toTest[i])) << " -> " << lattice::idFromPosisition(lattice::positionFromID(toTest[i])) << endl;
+    }
+    cout << "Neighbors " << endl;
+    // Note: don't use neighbors from border values, will become negative ...
+    toTest = {15000, 15250, 18500};
+    for(unsigned int i = 0; i < toTest.size(); ++i){
+        cout << "Neighbors for " << toTest[i] << ": " << printVector(lattice::positionFromID(toTest[i])) << endl;
+        vector<int> idNeigh = lattice::idNeighbors(toTest[i]);
+        for(unsigned int j = 0; j < idNeigh.size(); ++j){
+            cout << "   ... " << idNeigh[j] << ": " << printVector(lattice::positionFromID(idNeigh[j])) << endl;
+        }
+
+    }
+}
 
