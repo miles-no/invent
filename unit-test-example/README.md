@@ -9,7 +9,12 @@ and [Catch2](https://github.com/catchorg/Catch2/).
 
 ## Requirements
 
-You should be able to build the project using the following tools:
+This project has been tested on the following platforms:
+
+* MacOS 14
+* Ubuntu 22.04
+
+You should be able to build the project using the following Unix tools:
 
 * [CMake](https://cmake.org/) - version 3.30 used during development, but an older version probably will work just fine.
 * A C++ compiler with C++11 support
@@ -34,3 +39,17 @@ Inside the `build` directory, run the following command:
 
 * To run the CppUnit tests: `./run_tests_cppunit`
 * To run the Catch2 tests: `./run_tests_catch2`
+
+## Running on Windows
+
+To run the unit tests on Windows, you have several options:
+a) Use the WSL (Windows Subsystem for Linux) and run the tests on Ubuntu 22.04. In this case, open the WSL command line
+and follow the instructions above.
+b) Use Visual Studio. In this case, run the following commands:
+
+```bash
+mkdir build
+cd build
+cmake ..
+```
+A solution file will be generated inside the `build` directory. Open it with Visual Studio and run the tests there.
