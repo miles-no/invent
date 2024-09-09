@@ -1,5 +1,5 @@
 #include "lattice.h"
-#import "compact.h"
+#include "compact.h"
 
 vector<int> lattice::positionFromID(int IDcoord){
     int z = IDcoord / (XWidth * YWidth);
