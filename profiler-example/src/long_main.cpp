@@ -22,17 +22,17 @@ long long sumElements(vector<int> &data) {
     return accumulate(data.begin(), data.end(), 0LL);
 }
 
-void sleep(int seconds) {
+void sleep(const int seconds) {
     // Busy loop for the specified number of seconds
-    auto startTime = getTime();
-    auto endTime = startTime + chrono::seconds(seconds);
+    const auto startTime = getTime();
+    const auto endTime = startTime + chrono::seconds(seconds);
     auto currentTime = startTime;
     while (currentTime < endTime) {
         currentTime = getTime();
     }
 }
 
-vector<int> allocateData(size_t size) {
+vector<int> allocateData(const size_t size) {
     return vector<int>(size);
 }
 
@@ -47,14 +47,14 @@ int main() {
     vector<int> data = allocateData(10000000);
     fillWithNumbers(data);
 
-    auto start = getTime();
+    const auto start = getTime();
 
     sort(data);
-    long long sum = sumElements(data);
+    const long long sum = sumElements(data);
     sleep(1);
 
-    auto end = getTime();
-    chrono::duration<double> elapsed = end - start;
+    const auto end = getTime();
+    const chrono::duration<double> elapsed = end - start;
 
     // Output the results
     cout << "Sum: " << sum << endl;
