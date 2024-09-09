@@ -2,10 +2,11 @@
 #include <vector>
 #include <numeric>
 #include <algorithm>
+#include <chrono>
 
 using namespace std;
 
-chrono::steady_clock::time_point getTime() {
+chrono::system_clock::time_point getTime() {
     return chrono::high_resolution_clock::now();
 }
 
