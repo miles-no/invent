@@ -1,0 +1,276 @@
+HEADER    LATTICE PROTEIN STRUCTURE               01-JAN-D0   9ABC              
+TITLE     FIT OF THE PDB STRUCTURE 1ADQ ONTO A LATTICE                          
+COMPND    MOL_ID: 1;                                                            
+COMPND   2 MOLECULE: LATTICE PROTEIN;                                           
+COMPND   3 CHAIN: A, B;                                                         
+COMPND   4 ENGINEERED: YES                                                      
+SOURCE    MOL_ID: 1                                                             
+KEYWDS    LATTICE EXPORT                                                        
+EXPDTA    YMIR THEORETICAL MODEL                                                
+AUTHOR    ABSOLUT SOFTWARE                                                      
+SEQRES   1 A  122  ASP ASN SER ARG TYR THR HIS PHE LEU THR GLN HIS TYR 
+SEQRES   2 A  122  ASP ALA LYS PRO GLN GLY ARG ASP ASP ARG TYR CYS GLU 
+SEQRES   3 A  122  SER ILE MET ARG ARG ARG GLY LEU THR SER PRO CYS LYS 
+SEQRES   4 A  122  ASP ILE ASN THR PHE ILE HIS GLY ASN LYS ARG SER ILE 
+SEQRES   5 A  122  LYS ALA ILE CYS GLU ASN LYS ASN GLY ASN PRO HIS ARG 
+SEQRES   6 A  122  GLU ASN LEU ARG ILE SER LYS SER SER PHE GLN VAL THR 
+SEQRES   7 A  122  THR CYS LYS LEU HIS GLY GLY SER PRO TRP PRO PRO CYS 
+SEQRES   8 A  122  GLN TYR ARG ALA THR ALA GLY PHE ARG ASN VAL VAL VAL 
+SEQRES   9 A  122  ALA CYS GLU ASN GLY LEU PRO VAL HIS LEU ASP GLN SER 
+SEQRES  10 A  122  ILE PHE ARG ARG PRO                                 
+SEQRES   1 B    6  ALA GLY PRO SER THR THR                             
+HETATM    1  CA  ASP A   1      -3.428  -3.428  -3.428  1.00  0.00           C  
+HETATM    2  CA  ASN A   2      -3.238  -3.428  -3.428  1.00  0.00           C  
+HETATM    3  CA  SER A   3      -3.238  -3.428  -3.238  1.00  0.00           C  
+HETATM    4  CA  ARG A   4      -3.047  -3.428  -3.238  1.00  0.00           C  
+HETATM    5  CA  TYR A   5      -3.047  -3.238  -3.238  1.00  0.00           C  
+HETATM    6  CA  THR A   6      -3.238  -3.238  -3.238  1.00  0.00           C  
+HETATM    7  CA  HIS A   7      -3.238  -3.238  -3.428  1.00  0.00           C  
+HETATM    8  CA  PHE A   8      -3.047  -3.238  -3.428  1.00  0.00           C  
+HETATM    9  CA  LEU A   9      -3.047  -3.047  -3.428  1.00  0.00           C  
+HETATM   10  CA  THR A  10      -3.238  -3.047  -3.428  1.00  0.00           C  
+HETATM   11  CA  GLN A  11      -3.238  -3.047  -3.238  1.00  0.00           C  
+HETATM   12  CA  HIS A  12      -3.047  -3.047  -3.238  1.00  0.00           C  
+HETATM   13  CA  TYR A  13      -3.047  -2.857  -3.238  1.00  0.00           C  
+HETATM   14  CA  ASP A  14      -3.047  -2.857  -3.428  1.00  0.00           C  
+HETATM   15  CA  ALA A  15      -2.857  -2.857  -3.428  1.00  0.00           C  
+HETATM   16  CA  LYS A  16      -2.857  -2.666  -3.428  1.00  0.00           C  
+HETATM   17  CA  PRO A  17      -2.857  -2.666  -3.238  1.00  0.00           C  
+HETATM   18  CA  GLN A  18      -2.857  -2.476  -3.238  1.00  0.00           C  
+HETATM   19  CA  GLY A  19      -3.047  -2.476  -3.238  1.00  0.00           C  
+HETATM   20  CA  ARG A  20      -3.047  -2.476  -3.428  1.00  0.00           C  
+HETATM   21  CA  ASP A  21      -3.047  -2.285  -3.428  1.00  0.00           C  
+HETATM   22  CA  ASP A  22      -3.238  -2.285  -3.428  1.00  0.00           C  
+HETATM   23  CA  ARG A  23      -3.238  -2.285  -3.238  1.00  0.00           C  
+HETATM   24  CA  TYR A  24      -3.238  -2.476  -3.238  1.00  0.00           C  
+HETATM   25  CA  CYS A  25      -3.428  -2.476  -3.238  1.00  0.00           C  
+HETATM   26  CA  GLU A  26      -3.428  -2.476  -3.428  1.00  0.00           C  
+HETATM   27  CA  SER A  27      -3.238  -2.476  -3.428  1.00  0.00           C  
+HETATM   28  CA  ILE A  28      -3.238  -2.666  -3.428  1.00  0.00           C  
+HETATM   29  CA  MET A  29      -3.428  -2.666  -3.428  1.00  0.00           C  
+HETATM   30  CA  ARG A  30      -3.428  -2.666  -3.619  1.00  0.00           C  
+HETATM   31  CA  ARG A  31      -3.238  -2.666  -3.619  1.00  0.00           C  
+HETATM   32  CA  ARG A  32      -3.238  -2.857  -3.619  1.00  0.00           C  
+HETATM   33  CA  GLY A  33      -3.428  -2.857  -3.619  1.00  0.00           C  
+HETATM   34  CA  LEU A  34      -3.428  -2.857  -3.428  1.00  0.00           C  
+HETATM   35  CA  THR A  35      -3.619  -2.857  -3.428  1.00  0.00           C  
+HETATM   36  CA  SER A  36      -3.619  -2.857  -3.619  1.00  0.00           C  
+HETATM   37  CA  PRO A  37      -3.619  -2.666  -3.619  1.00  0.00           C  
+HETATM   38  CA  CYS A  38      -3.619  -2.666  -3.428  1.00  0.00           C  
+HETATM   39  CA  LYS A  39      -3.619  -2.666  -3.238  1.00  0.00           C  
+HETATM   40  CA  ASP A  40      -3.619  -2.666  -3.047  1.00  0.00           C  
+HETATM   41  CA  ILE A  41      -3.428  -2.666  -3.047  1.00  0.00           C  
+HETATM   42  CA  ASN A  42      -3.428  -2.666  -3.238  1.00  0.00           C  
+HETATM   43  CA  THR A  43      -3.428  -2.857  -3.238  1.00  0.00           C  
+HETATM   44  CA  PHE A  44      -3.238  -2.857  -3.238  1.00  0.00           C  
+HETATM   45  CA  ILE A  45      -3.238  -2.857  -3.047  1.00  0.00           C  
+HETATM   46  CA  HIS A  46      -3.047  -2.857  -3.047  1.00  0.00           C  
+HETATM   47  CA  GLY A  47      -2.857  -2.857  -3.047  1.00  0.00           C  
+HETATM   48  CA  ASN A  48      -2.857  -2.857  -3.238  1.00  0.00           C  
+HETATM   49  CA  LYS A  49      -2.857  -3.047  -3.238  1.00  0.00           C  
+HETATM   50  CA  ARG A  50      -2.666  -3.047  -3.238  1.00  0.00           C  
+HETATM   51  CA  SER A  51      -2.666  -3.047  -3.047  1.00  0.00           C  
+HETATM   52  CA  ILE A  52      -2.857  -3.047  -3.047  1.00  0.00           C  
+HETATM   53  CA  LYS A  53      -2.857  -3.238  -3.047  1.00  0.00           C  
+HETATM   54  CA  ALA A  54      -2.857  -3.238  -2.857  1.00  0.00           C  
+HETATM   55  CA  ILE A  55      -3.047  -3.238  -2.857  1.00  0.00           C  
+HETATM   56  CA  CYS A  56      -3.047  -3.428  -2.857  1.00  0.00           C  
+HETATM   57  CA  GLU A  57      -2.857  -3.428  -2.857  1.00  0.00           C  
+HETATM   58  CA  ASN A  58      -2.857  -3.428  -2.666  1.00  0.00           C  
+HETATM   59  CA  LYS A  59      -2.857  -3.619  -2.666  1.00  0.00           C  
+HETATM   60  CA  ASN A  60      -2.666  -3.619  -2.666  1.00  0.00           C  
+HETATM   61  CA  GLY A  61      -2.666  -3.619  -2.857  1.00  0.00           C  
+HETATM   62  CA  ASN A  62      -2.666  -3.809  -2.857  1.00  0.00           C  
+HETATM   63  CA  PRO A  63      -2.857  -3.809  -2.857  1.00  0.00           C  
+HETATM   64  CA  HIS A  64      -3.047  -3.809  -2.857  1.00  0.00           C  
+HETATM   65  CA  ARG A  65      -3.047  -3.619  -2.857  1.00  0.00           C  
+HETATM   66  CA  GLU A  66      -3.238  -3.619  -2.857  1.00  0.00           C  
+HETATM   67  CA  ASN A  67      -3.238  -3.428  -2.857  1.00  0.00           C  
+HETATM   68  CA  LEU A  68      -3.238  -3.238  -2.857  1.00  0.00           C  
+HETATM   69  CA  ARG A  69      -3.238  -3.238  -2.666  1.00  0.00           C  
+HETATM   70  CA  ILE A  70      -3.238  -3.047  -2.666  1.00  0.00           C  
+HETATM   71  CA  SER A  71      -3.047  -3.047  -2.666  1.00  0.00           C  
+HETATM   72  CA  LYS A  72      -2.857  -3.047  -2.666  1.00  0.00           C  
+HETATM   73  CA  SER A  73      -2.857  -2.857  -2.666  1.00  0.00           C  
+HETATM   74  CA  SER A  74      -2.857  -2.857  -2.857  1.00  0.00           C  
+HETATM   75  CA  PHE A  75      -3.047  -2.857  -2.857  1.00  0.00           C  
+HETATM   76  CA  GLN A  76      -3.047  -2.666  -2.857  1.00  0.00           C  
+HETATM   77  CA  VAL A  77      -3.047  -2.666  -3.047  1.00  0.00           C  
+HETATM   78  CA  THR A  78      -3.238  -2.666  -3.047  1.00  0.00           C  
+HETATM   79  CA  THR A  79      -3.238  -2.476  -3.047  1.00  0.00           C  
+HETATM   80  CA  CYS A  80      -3.428  -2.476  -3.047  1.00  0.00           C  
+HETATM   81  CA  LYS A  81      -3.619  -2.476  -3.047  1.00  0.00           C  
+HETATM   82  CA  LEU A  82      -3.619  -2.476  -3.238  1.00  0.00           C  
+HETATM   83  CA  HIS A  83      -3.619  -2.285  -3.238  1.00  0.00           C  
+HETATM   84  CA  GLY A  84      -3.809  -2.285  -3.238  1.00  0.00           C  
+HETATM   85  CA  GLY A  85      -3.809  -2.476  -3.238  1.00  0.00           C  
+HETATM   86  CA  SER A  86      -3.809  -2.476  -3.428  1.00  0.00           C  
+HETATM   87  CA  PRO A  87      -3.809  -2.666  -3.428  1.00  0.00           C  
+HETATM   88  CA  TRP A  88      -3.809  -2.666  -3.619  1.00  0.00           C  
+HETATM   89  CA  PRO A  89      -3.809  -2.476  -3.619  1.00  0.00           C  
+HETATM   90  CA  PRO A  90      -3.619  -2.476  -3.619  1.00  0.00           C  
+HETATM   91  CA  CYS A  91      -3.619  -2.476  -3.428  1.00  0.00           C  
+HETATM   92  CA  GLN A  92      -3.619  -2.285  -3.428  1.00  0.00           C  
+HETATM   93  CA  TYR A  93      -3.428  -2.285  -3.428  1.00  0.00           C  
+HETATM   94  CA  ARG A  94      -3.428  -2.285  -3.238  1.00  0.00           C  
+HETATM   95  CA  ALA A  95      -3.428  -2.285  -3.047  1.00  0.00           C  
+HETATM   96  CA  THR A  96      -3.238  -2.285  -3.047  1.00  0.00           C  
+HETATM   97  CA  ALA A  97      -3.047  -2.285  -3.047  1.00  0.00           C  
+HETATM   98  CA  GLY A  98      -3.047  -2.476  -3.047  1.00  0.00           C  
+HETATM   99  CA  PHE A  99      -3.047  -2.476  -2.857  1.00  0.00           C  
+HETATM  100  CA  ARG A 100      -3.238  -2.476  -2.857  1.00  0.00           C  
+HETATM  101  CA  ASN A 101      -3.238  -2.666  -2.857  1.00  0.00           C  
+HETATM  102  CA  VAL A 102      -3.238  -2.857  -2.857  1.00  0.00           C  
+HETATM  103  CA  VAL A 103      -3.238  -3.047  -2.857  1.00  0.00           C  
+HETATM  104  CA  VAL A 104      -3.047  -3.047  -2.857  1.00  0.00           C  
+HETATM  105  CA  ALA A 105      -3.047  -3.047  -3.047  1.00  0.00           C  
+HETATM  106  CA  CYS A 106      -3.047  -3.238  -3.047  1.00  0.00           C  
+HETATM  107  CA  GLU A 107      -3.047  -3.428  -3.047  1.00  0.00           C  
+HETATM  108  CA  ASN A 108      -3.047  -3.619  -3.047  1.00  0.00           C  
+HETATM  109  CA  GLY A 109      -3.238  -3.619  -3.047  1.00  0.00           C  
+HETATM  110  CA  LEU A 110      -3.238  -3.428  -3.047  1.00  0.00           C  
+HETATM  111  CA  PRO A 111      -3.238  -3.238  -3.047  1.00  0.00           C  
+HETATM  112  CA  VAL A 112      -3.428  -3.238  -3.047  1.00  0.00           C  
+HETATM  113  CA  HIS A 113      -3.428  -3.238  -2.857  1.00  0.00           C  
+HETATM  114  CA  LEU A 114      -3.428  -3.047  -2.857  1.00  0.00           C  
+HETATM  115  CA  ASP A 115      -3.428  -3.047  -3.047  1.00  0.00           C  
+HETATM  116  CA  GLN A 116      -3.428  -2.857  -3.047  1.00  0.00           C  
+HETATM  117  CA  SER A 117      -3.619  -2.857  -3.047  1.00  0.00           C  
+HETATM  118  CA  ILE A 118      -3.619  -2.857  -2.857  1.00  0.00           C  
+HETATM  119  CA  PHE A 119      -3.428  -2.857  -2.857  1.00  0.00           C  
+HETATM  120  CA  ARG A 120      -3.428  -2.666  -2.857  1.00  0.00           C  
+HETATM  121  CA  ARG A 121      -3.428  -2.476  -2.857  1.00  0.00           C  
+HETATM  122  CA  PRO A 122      -3.619  -2.476  -2.857  1.00  0.00           C  
+HETATM 2001  CA  ALA B2001      -3.619  -2.857  -3.809  1.00  0.00           C  
+HETATM 2002  CA  GLY B2002      -3.428  -2.857  -3.809  1.00  0.00           C  
+HETATM 2003  CA  PRO B2003      -3.428  -3.047  -3.809  1.00  0.00           C  
+HETATM 2004  CA  SER B2004      -3.428  -3.047  -3.619  1.00  0.00           C  
+HETATM 2005  CA  THR B2005      -3.428  -3.047  -3.428  1.00  0.00           C  
+HETATM 2006  CA  THR B2006      -3.428  -3.047  -3.238  1.00  0.00           C  
+CONECT    1    2
+CONECT    2    3
+CONECT    3    4
+CONECT    4    5
+CONECT    5    6
+CONECT    6    7
+CONECT    7    8
+CONECT    8    9
+CONECT    9   10
+CONECT   10   11
+CONECT   11   12
+CONECT   12   13
+CONECT   13   14
+CONECT   14   15
+CONECT   15   16
+CONECT   16   17
+CONECT   17   18
+CONECT   18   19
+CONECT   19   20
+CONECT   20   21
+CONECT   21   22
+CONECT   22   23
+CONECT   23   24
+CONECT   24   25
+CONECT   25   26
+CONECT   26   27
+CONECT   27   28
+CONECT   28   29
+CONECT   29   30
+CONECT   30   31
+CONECT   31   32
+CONECT   32   33
+CONECT   33   34
+CONECT   34   35
+CONECT   35   36
+CONECT   36   37
+CONECT   37   38
+CONECT   38   39
+CONECT   39   40
+CONECT   40   41
+CONECT   41   42
+CONECT   42   43
+CONECT   43   44
+CONECT   44   45
+CONECT   45   46
+CONECT   46   47
+CONECT   47   48
+CONECT   48   49
+CONECT   49   50
+CONECT   50   51
+CONECT   51   52
+CONECT   52   53
+CONECT   53   54
+CONECT   54   55
+CONECT   55   56
+CONECT   56   57
+CONECT   57   58
+CONECT   58   59
+CONECT   59   60
+CONECT   60   61
+CONECT   61   62
+CONECT   62   63
+CONECT   63   64
+CONECT   64   65
+CONECT   65   66
+CONECT   66   67
+CONECT   67   68
+CONECT   68   69
+CONECT   69   70
+CONECT   70   71
+CONECT   71   72
+CONECT   72   73
+CONECT   73   74
+CONECT   74   75
+CONECT   75   76
+CONECT   76   77
+CONECT   77   78
+CONECT   78   79
+CONECT   79   80
+CONECT   80   81
+CONECT   81   82
+CONECT   82   83
+CONECT   83   84
+CONECT   84   85
+CONECT   85   86
+CONECT   86   87
+CONECT   87   88
+CONECT   88   89
+CONECT   89   90
+CONECT   90   91
+CONECT   91   92
+CONECT   92   93
+CONECT   93   94
+CONECT   94   95
+CONECT   95   96
+CONECT   96   97
+CONECT   97   98
+CONECT   98   99
+CONECT   99  100
+CONECT  100  101
+CONECT  101  102
+CONECT  102  103
+CONECT  103  104
+CONECT  104  105
+CONECT  105  106
+CONECT  106  107
+CONECT  107  108
+CONECT  108  109
+CONECT  109  110
+CONECT  110  111
+CONECT  111  112
+CONECT  112  113
+CONECT  113  114
+CONECT  114  115
+CONECT  115  116
+CONECT  116  117
+CONECT  117  118
+CONECT  118  119
+CONECT  119  120
+CONECT  120  121
+CONECT  121  122
+CONECT 2001 2002
+CONECT 2002 2003
+CONECT 2003 2004
+CONECT 2004 2005
+CONECT 2005 2006
+
